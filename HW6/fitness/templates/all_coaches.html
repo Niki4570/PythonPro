@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>All Coaches</h2>
+    <ul>
+        {% for coach in coaches %}
+            <li>
+                <p>Name: {{ coach.name }}<br>
+                Gender: {{ coach.gender }}<br>
+                Age: {{ coach.age }}<br>
+                Score: {{ coach.score }}<br>
+                Fitness Center: {{ coach.fitness_center_id }}<br>
+                <form action="/trainer/{{ coach.coach_id }}/reviews" method="GET">
+        <button type="submit">Reviews</button>
+</form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

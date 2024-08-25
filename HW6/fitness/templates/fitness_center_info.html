@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gym Info</title>
+</head>
+<body>
+Fitness Center ID: {{ gym.id }}<br>
+Address: {{ gym.address }}<br>
+Name: {{ gym.name }}<br>
+Contacts: {{ gym.contacts }}<br>
+<form action="/fitness_center/{{ gym.id }}/services" method="GET">
+        <button type="submit">All Services</button>
+                </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review</title>
+</head>
+<body>
+
+<form action='/user_{{ user_id }}/reservations/place_reservation' method='GET'>
+    <label for="gym_id">Fitness Center ID:</label>
+    <input type="number" id="gym_id" name="gym_id" min="1" max="5"><br><br>
+
+    <label for="service">Service:</label>
+    <input type="text" id="service" name="service_name"><br><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date"><br><br>
+
+    <label for="time">Time:</label>
+    <input type="text" id="time" name="time"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

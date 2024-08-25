@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <h2>Edit Profile</h2>
+    <form action="/user_{{ user_id }}/profile_edit" method="POST">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="birth_date">Birth Date:</label>
+        <input type="date" id="birth_date" name="birth_date"><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone"><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
