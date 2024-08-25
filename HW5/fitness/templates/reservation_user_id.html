@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <h2>Reservation Information</h2>
+    <ul>
+        {% for reservation in reservations %}
+            <li>
+                <p>Fitness Center ID: {{ reservation.fitness_center_id }}<br>
+                Service: {{ reservation.service }}<br>
+                Date: {{ reservation.date }}<br>
+                Time: {{ reservation.time }}
+            </li>
+        {% endfor %}
+    </ul>
+</ul>
+</body>
+</html>

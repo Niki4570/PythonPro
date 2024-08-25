@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>All Gyms</h2>
+    <ul>
+        {% for gym in gyms %}
+            <li>
+                <p>Fitness Center ID: {{ gym.id }}<br>
+                    Address: {{ gym.address }}<br>
+                    Name: {{ gym.name }}<br>
+                    Contacts: {{ gym.contacts }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
