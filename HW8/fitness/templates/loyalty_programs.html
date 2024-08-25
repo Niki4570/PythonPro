@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loyalty Programs</title>
+</head>
+<body>
+    <h2>All Programs</h2>
+    <ul>
+        {% for program in programs %}
+            <li>
+                <p>Program: {{ program.program }}<br>
+                Description: {{ program.description }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

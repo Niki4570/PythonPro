@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coach Info</title>
+</head>
+<body>
+Name: {{ coach.name }}<br>
+Gender: {{ coach.gender }}<br>
+Age: {{ coach.age }}<br>
+Score: {{ coach.score }}<br>
+Fitness Center: {{ coach.fitness_center_id }}<br>
+<form action="/trainer/{{ id }}/reviews" method="GET">
+        <button type="submit">Reviews</button>
+</form>
+</body>
+</html>
