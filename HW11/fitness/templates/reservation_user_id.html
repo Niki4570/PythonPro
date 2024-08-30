@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Reservation Information</h2>
+    <ul>
+        {% for reservation in reservations %}
+            <li>
+                <p>Fitness Center ID: {{ reservation.fitness_center_id }}<br>
+                Service: {{ reservation.service }}<br>
+                Coach ID: {{ reservation.coach_id }}<br>
+                Date: {{ reservation.date }}<br>
+                Time: {{ reservation.time }}<br>
+                Reservation ID: {{ reservation.reservation_id }}
+                <form action="/user_{{ id }}/reservations/{{ reservation.reservation_id }}/delete" method="POST">
+                    <button type="submit">Delete Reservation</button><br>
+                </form><br>
+            </li>
+        {% endfor %}
+    </ul>
+<a href="/user_{{ id }}/reservations/select_service">
+    <button type="button">Place Reservation</button>
+</a>
+</body>
+</html>

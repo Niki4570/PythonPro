@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Service</title>
+</head>
+<body>
+<form method="POST" action="/user_{{ user_id }}/reservations/select_service">
+    <input type="hidden" name="user_id" value="{{ user_id }}">
+  <label for="service">Service:</label>
+  <select name="service" id="service">
+    {% for service in services %}
+    <option value="{{ service.service_id }}">{{ service.name }}</option>
+    {% endfor %}
+  </select>
+  <input type="submit" value="Next">
+</form>
+</body>
+</html>
