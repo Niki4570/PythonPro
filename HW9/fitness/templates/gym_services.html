@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>All Services in Fitness Center {{ fc_id }}</h2>
+    <ul>
+        {% for service in services %}
+            <li>
+                <p>Name: {{ service.name }}<br>
+                Duration: {{ service.duration }}<br>
+                Description: {{ service.description }}<br>
+                Price: {{ service.price }}<br>
+                Max Attendees: {{ service.max_attendees }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

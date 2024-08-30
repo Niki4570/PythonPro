@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Info</title>
+</head>
+<body>
+User ID: {{ user.user_id }}<br>
+Login: {{ user.login }}<br>
+Birth Date: {{ user.birth_date }}<br>
+Phone: {{ user.phone }}<br>
+Funds: {{ user.funds }}<br>
+<a href="/user_{{ user.user_id }}/funds">
+    <button type="button">Funds</button>
+</a>
+<a href="/user_{{ user.user_id }}/reservations">
+    <button type="button">Place Reservation</button>
+</a>
+<a href="/user_{{ user.user_id }}/profile_edit">
+    <button type="button">Profile Edit</button>
+</a>
+</body>
+</html>

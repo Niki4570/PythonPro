@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="/user_{{ user_id }}/reservations/select_coach">
+  <input type="hidden" name="user_id" value="{{ user_id }}">
+  <label for="coach">Coach:</label>
+  <select name="coach" id="coach">
+    {% for coach in coaches %}
+    <option value="{{ coach.coach_id }}">{{ coach.name }}</option>
+    {% endfor %}
+  </select>
+  <label for="desired_date">Date:</label>
+  <input type="date" id="desired_date" name="desired_date">
+  <input type="hidden" name="service" value="{{ service }}">
+  <input type="submit" value="Next">
+</form>
+</body>
+</html>

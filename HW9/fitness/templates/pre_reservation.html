@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose a Time Slot</title>
+</head>
+<body>
+<h2>Choose a time slot</h2>
+<form method="POST" action="/user_{{ user_id }}/reservations/pre_reservation">
+  <input type="hidden" name="coach" value="{{ coach }}">
+  <input type="hidden" name="service" value="{{ service }}">
+  <input type="hidden" name="date" value="{{ desired_date }}">
+
+  <p>Debug: Time Slots: {{ time_slots }}</p>
+  <p>Debug: Service: {{ service }}</p>
+  <p>Debug: User ID: {{ user_id }}</p>
+
+  <label for="time">Available Slots:</label>
+  <select name="time" id="time">
+    {% if time_slots %}
+      {% for slot in time_slots %}
+        <option value="{{ slot }}">{{ slot }}</option>
+      {% endfor %}
+    {% else %}
+      <option value="">No available slots</option>
+    {% endif %}
+  </select>
+  <input type="submit" value="Reserve">
+</form>
+</body>
+</html>
+

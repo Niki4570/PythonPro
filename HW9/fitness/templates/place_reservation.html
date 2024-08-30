@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Place Reservation</title>
+</head>
+<body>
+    <h2>Confirm Your Reservation</h2>
+    <form method="POST" action="/user_{{ user_id }}/reservations/place_reservation">
+        <input type="hidden" name="coach" value="{{ coach_id }}">
+        <input type="hidden" name="service" value="{{ service_id }}">
+        <input type="hidden" name="date" value="{{ desired_date }}">
+        <input type="hidden" name="time" value="{{ time }}">
+        <p><strong>Coach ID:</strong> {{ coach_id }}</p>
+        <p><strong>Service ID:</strong> {{ service_id }}</p>
+        <p><strong>Coach:</strong> {{ coach_name }}</p>
+        <p><strong>Service:</strong> {{ service_name }}</p>
+        <p><strong>Date:</strong> {{ desired_date }}</p>
+        <p><strong>Time:</strong> {{ time }}</p>
+        <input type="submit" value="Confirm Reservation">
+    </form>
+</body>
+</html>

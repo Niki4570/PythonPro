@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review</title>
+</head>
+<body>
+<form action='/review' method='POST'>
+    <label for="points">Points:</label>
+    <input type="number" id="points" name="points" min="1" max="5"><br><br>
+
+    <label for="text">Review:</label>
+    <input type="text" id="text" name="text"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
