@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Machines</title>
+</head>
+<body>
+{% for box in boxes %}
+    ID: {{ box.pk }} <br>
+    City: {{ box.city }} <br>
+    Status: {{ box.address }} <br>
+    <form action="{% url 'machine_info' box.pk %}" method="get">
+        <input type="submit" value="Post Machine Info">
+    </form>
+    -----------
+    <br>
+{% endfor %}
+</body>
+</html>

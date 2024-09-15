@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Page</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1>Welcome, {{ user.first_name }}!</h1>
+    <p>Login: {{ user.username }}</p>
+{% else %}
+    <p>Please log in to view this page.</p>
+{% endif %}
+
+    <form action="{% url 'all_parcels' %}" method="get">
+        <button type="submit">View Parcels</button>
+    </form>
+</body>
+</html>

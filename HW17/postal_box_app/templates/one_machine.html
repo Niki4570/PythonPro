@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Machine</title>
+</head>
+<body>
+    ID: {{ box.pk }} <br>
+    City: {{ box.city }} <br>
+    Status: {{ box.address }} <br> <br>
+    Lockers: <br>
+{% for locker in lockers %}
+    ID: {{ locker.pk }} <br>
+    Size: {{ locker.size }} <br>
+    Status: {{ locker.status }} <br>
+    -----------
+    <br>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Parcels</title>
+</head>
+<body>
+{% for parcel in parcels %}
+    Sender: {{ parcel.sender }} <br>
+    Status: {{ parcel.status }} <br>
+    Post Machine: {{ parcel.post_machine_recipient.city}} {{parcel.post_machine_recipient.address }}
+    <form action="{% url 'parcel_info' parcel.pk %}" method="get">
+        <input type="submit" value="View Parcel">
+    </form>
+    -----------
+    <br>
+{% endfor %}
+</body>
+</html>
